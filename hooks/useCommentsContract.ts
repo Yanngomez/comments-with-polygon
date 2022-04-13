@@ -21,16 +21,16 @@ const useCommentsContract = () => {
   // An ethers.Signer instance associated with the signed-in wallet.
   // https://docs.ethers.io/v5/api/signer/
   const [signer] = useSigner();
-  // An ethers.Provider instance. This will be the same provider that is
+  // An ethers.Provider instance. This will be the same provider that is  
   // passed as a prop to the WagmiProvider.
   const provider = useProvider();
 
-  // This returns a new ethers. Contract ready to interact with our comments API.
+  // This returns a new ethers.Contract ready to interact with our comments API.
   // We need to pass in the address of our deployed contract as well as its abi.
   // We also pass in the signer if there is a signed in wallet, or if there's
   // no signed in wallet then we'll pass in the connected provider.
   const contract = wagmi.useContract({
-    addressOrName: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    addressOrName: "0x39b201FC25bDEedF494e27Df3C5a7E8418EbDFA1",
     contractInterface: CommentsContract.abi,
     signerOrProvider: signer.data || provider,
   });

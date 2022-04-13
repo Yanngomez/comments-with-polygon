@@ -11,11 +11,6 @@ const AuthButton: React.FunctionComponent<AuthButtonProps> = (props) => {
 
   React.useEffect(() => {
     if (connectQuery.error?.name === "ConnectorNotFoundError") {
-      toast.error("Metamask extension required to sign in");
-    }
-  }, [connectQuery.error]);
-
-  // If not authenticated, require sign-in
   if (!accountQuery.data?.address) {
     return (
       <Button
@@ -33,4 +28,3 @@ const AuthButton: React.FunctionComponent<AuthButtonProps> = (props) => {
   return <Button {...props}>{props.children}</Button>;
 };
 
-export default AuthButton;

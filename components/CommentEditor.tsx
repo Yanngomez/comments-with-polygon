@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HStack, Stack, Textarea } from "@chakra-ui/react";
+import { Button, HStack, Stack, Textarea } from "@chakra-ui/react";
 import { constants } from "ethers";
 import Avatar from "@davatar/react";
 import AuthButton from "./AuthButton";
@@ -35,7 +35,7 @@ const CommentEditor: React.FunctionComponent<CommentEditorProps> = ({
           fontSize="lg"
         />
       </HStack>
-      <AuthButton
+      <Button
         size="sm"
         colorScheme="pink"
         alignSelf="flex-end"
@@ -50,7 +50,7 @@ const CommentEditor: React.FunctionComponent<CommentEditorProps> = ({
         isLoading={mutation.isLoading}
       >
         Submit
-      </AuthButton>
+      </Button>
     </Stack>
   );
 };
